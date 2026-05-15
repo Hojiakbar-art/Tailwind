@@ -9,11 +9,15 @@
       "Courier New", monospace;
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-950: oklch(28.2% 0.091 267.935);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
     --radius-4xl: 2rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -168,6 +172,12 @@
   }
 }
 @layer utilities {
+  .m-\[50px_0px\] {
+    margin: 50px 0px;
+  }
+  .m-\[50px_\] {
+    margin: 50px ;
+  }
   .m-auto {
     margin: auto;
   }
@@ -197,6 +207,12 @@
   }
   .w-70 {
     width: calc(var(--spacing) * 70);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-3 {
+    max-width: calc(var(--spacing) * 3);
   }
   .max-w-300 {
     max-width: calc(var(--spacing) * 300);
@@ -243,6 +259,9 @@
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
   .rounded-4xl {
     border-radius: var(--radius-4xl);
   }
@@ -265,6 +284,9 @@
   }
   .bg-blue-950 {
     background-color: var(--color-blue-950);
+  }
+  .bg-white {
+    background-color: var(--color-white);
   }
   .bg-\[url\(\)\] {
     background-image: url();
@@ -326,6 +348,12 @@
   .p-\[7px_25px\] {
     padding: 7px 25px;
   }
+  .p-\[10\] {
+    padding: 10;
+  }
+  .p-\[10px\] {
+    padding: 10px;
+  }
   .p-\[20px\] {
     padding: 20px;
   }
@@ -338,11 +366,21 @@
   .p-\[20px_\] {
     padding: 20px ;
   }
+  .p-\[30px_0px\] {
+    padding: 30px 0px;
+  }
+  .p-\[30px_\] {
+    padding: 30px ;
+  }
   .text-center {
     text-align: center;
   }
   .font-sans {
     font-family: var(--font-sans);
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-\[10px\] {
     font-size: 10px;
@@ -362,6 +400,9 @@
   }
   .text-blue-950 {
     color: var(--color-blue-950);
+  }
+  .text-gray-400 {
+    color: var(--color-gray-400);
   }
   .text-white {
     color: var(--color-white);
